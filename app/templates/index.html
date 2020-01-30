@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+  <title>Vader Sentiment</title>
+  <script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
+</head>
+<body class="my-body">
+  
+
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto ml flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">VADER</h3>
+      <nav class="nav nav-masthead justify-content-center">
+      </nav>
+    </div>
+  </header>
+
+  
+  <main role="main" class="inner cover">
+    <div class="mb-5">
+      <h1   hidden id="compound">Majority</h1>
+      <span hidden id="positive" class="badge badge-success">Success</span>
+      <span hidden id="neutral" class="badge badge-secondary">Secondary</span>
+      <span hidden id="negative" class="badge badge-danger">Danger</span>
+    </div>
+    <h4 class="cover-heading mb-3">type anything</h4>
+    <form id="inputForm">
+      <div class="form-group">
+        <textarea class="form-control my-textarea" id="inputText"></textarea>
+      </div>
+      <button type="submit" class="btn mt-3  btn-primary">Predict Sentiment</button>
+    </form>
+  </main>
+
+
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Demo by <a href="https://twitter.com/sebvargas_">@sebvargas_</a></p>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
