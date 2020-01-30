@@ -1,1 +1,1 @@
-web:gunicorn vader:app
+web:heroku ps:scale web=1;gunicorn vader:app
