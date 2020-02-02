@@ -1,27 +1,17 @@
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
-  <title>Vader Sentiment</title>
-  <script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
-</head>
-<body class="my-body">
-  
+{% extends "general/template.html" %}
+  {% block title %}  Vader Sentiment {% endblock %}
+    <script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
+  {% block styles %}{% endblock %}
+  {% block scripts_top %}
+    <script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
+  {% endblock %}
 
 
 
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto ml flex-column">
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <h3 class="masthead-brand">VADER</h3>
-      <nav class="nav nav-masthead justify-content-center">
-      </nav>
-    </div>
-  </header>
+{% block content %}
+
 
   
   <main role="main" class="inner cover">
@@ -47,7 +37,7 @@
       <p>Demo of <a href="https://github.com/cjhutto/vaderSentiment">VADER-Sentiment-Analysis</a> by <a href="https://twitter.com/sebvargas_">@sebvargas_</a></p>
     </div>
   </footer>
-</div>
 
+{% endblock %}
 </body>
 </html>

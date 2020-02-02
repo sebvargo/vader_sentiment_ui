@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+  {% block styles %}{% endblock %}
+  <title>{% block title %}{% endblock %}</title>
+  {% block scripts_top %}{% endblock %}
+</head>
+<body class="my-body">
+    <!-- ********************************************* -->
+    <!-- NAVBAR -->
+    <!-- ********************************************* -->
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto ml flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+            <h3 class="masthead-brand">SVA</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link {% if selection == 'menu' %}active {% else %} inactive {% endif %}" href="{{url_for('menu')}}">Home</a>
+                <a class="nav-link {% if selection == 'vader' %}active {% else %} inactive {% endif %}" href="{{url_for('vader.index')}}">Vader</a>
+                <!-- <a class="nav-link" href="#">Contact</a> -->
+            </nav>
+            </div>
+        </header>
+    
+    <!-- END NAVBAR -->
+    <!-- ********************************************* -->
+        
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+{% block scripts_bottom %}{% endblock %}
+</html>
