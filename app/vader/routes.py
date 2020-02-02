@@ -1,11 +1,12 @@
-from flask import render_template, request, jsonify
-from app.vader import BP
-from app.database import db_session
+from flask import render_template, current_app, request, jsonify
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from app.database import db_session
+from app.vader import BP
 
 @BP.route('/')
 def index():
     return render_template('vader/index.html', selection='vader')
+
 
 @BP.route('/predict', methods = ['POST', 'GET'])
 def predict():
@@ -26,6 +27,3 @@ def predict():
         vs       = analyzer.polarity_scores(text)
         
         return jsonify(vs)
-
-
-

@@ -19,7 +19,7 @@
             <div class="inner">
             <h3 class="masthead-brand">SVA</h3>
             <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link {% if selection == 'menu' %}active {% else %} inactive {% endif %}" href="{{url_for('menu')}}">Home</a>
+                <a class="nav-link {% if selection == 'general' %}active {% else %} inactive {% endif %}" href="{{url_for('general.index')}}">Home</a>
                 <a class="nav-link {% if selection == 'vader' %}active {% else %} inactive {% endif %}" href="{{url_for('vader.index')}}">Vader</a>
                 <!-- <a class="nav-link" href="#">Contact</a> -->
             </nav>
