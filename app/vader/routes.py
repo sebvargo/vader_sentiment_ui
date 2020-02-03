@@ -13,7 +13,7 @@ def predict():
     
     if request.method == 'POST':
         
-        text     = request.form.get('text')
+        text     = str(request.form.get('text'))
         analyzer = SentimentIntensityAnalyzer()
         vs       = analyzer.polarity_scores(text)
         
