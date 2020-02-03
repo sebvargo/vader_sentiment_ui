@@ -14,8 +14,11 @@ def create_app(config_class = Config):
     from app.general import BP as general_bp
     APP.register_blueprint(general_bp, url_prefix ='/')
 
-    from app.vader import BP as vader_bp
+    from app.vader   import BP as vader_bp
     APP.register_blueprint(vader_bp, url_prefix='/vader')
+
+    from app.reviews import BP as reviews_bp
+    APP.register_blueprint(reviews_bp, url_prefix='/reviews')
 
     return APP
 
