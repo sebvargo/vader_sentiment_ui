@@ -11,21 +11,20 @@
 
 
 {% block content %}
-<main role="main" class="inner cover">
-  <div class="mb-5">
-    <h1   hidden id="compound">Majority</h1>
-    <span hidden id="positive" class="badge badge-success">Success</span>
-    <span hidden id="neutral" class="badge badge-secondary">Secondary</span>
-    <span hidden id="negative" class="badge badge-danger">Danger</span>
-  </div>
-  <h4 class="cover-heading mb-3">type anything</h4>
-  <form id="inputForm">
-    <div class="form-group">
-      <textarea class="form-control my-textarea" id="inputText"></textarea>
+
+<div class="card my-card">
+    <div class="card-header my-card-header">
+     Rating {{rating}}
     </div>
-    <button type="submit" class="btn mt-3  btn-primary">Predict Sentiment</button>
-  </form>
-</main>
+    <div class="card-body my-card-body">
+      <h5 class="card-title">{{summary}}</h5>
+      <p class="card-text">{{text}}</p>
+    </div>
+  </div>
+
+
+
+
 
 
 

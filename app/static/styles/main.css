@@ -118,3 +118,13 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+
+
+
+/*
+* reviews
+*/
+
+.my-card {
+  background-color: transparent !important;
+}
