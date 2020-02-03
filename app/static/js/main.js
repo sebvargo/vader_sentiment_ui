@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // create request. 
     const request = new XMLHttpRequest();
     const text = document.querySelector('#inputText').value;
-    request.open('Post', '/predict')
+    request.open('Post', '/vader/predict')
 
     // callback function for when the request completes. 
     request.onload = function() {
