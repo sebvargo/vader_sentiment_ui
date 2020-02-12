@@ -5,7 +5,6 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 @BP.route('/')
 def index():
-    print(data.shape)
     return render_template('general/template.html', selection='general')
 
 
